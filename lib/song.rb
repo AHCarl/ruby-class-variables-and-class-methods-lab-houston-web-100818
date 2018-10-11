@@ -37,6 +37,18 @@ class Song
     end
     count
   end
+  
+  def self.artist_count
+    count = {}
+    @@artists.map do |artist|
+      if count.key?(artist)
+        count[artist] += 1 
+      else 
+        count[artist] = 1 
+      end
+    end
+    count
+  end
     
   
 end
