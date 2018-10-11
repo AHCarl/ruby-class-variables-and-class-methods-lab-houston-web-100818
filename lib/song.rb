@@ -30,6 +30,11 @@ class Song
     count = {}
     @@genres.map do |genre|
       if count.key?(genre)
+        count[genre] += 1 
+      else 
+        count[genre] = 1 
+      end
+    end
   end
     
   
